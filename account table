@@ -1,0 +1,26 @@
+
+
+create table project_account(
+account_number integer primary key,
+password varchar(20) not null,
+current_balance float not null,
+applicant_id integer references project_applicant(applicant_id)
+)
+
+
+insert into project_account values(1001,'password@123',1000,101);
+insert into project_account values(1002,'password@123',1000,102);
+insert into project_account values(1003,'password@123',1000,103);
+
+
+create table project_applicant(
+applicant_id integer primary key,
+applicant_name varchar(20) not null,
+applicant_status varchar(20) not null,
+)
+
+
+INSERT INTO PROJECT_APPLICANT VALUES(101,'APPLICANT1','APPLIED')
+INSERT INTO PROJECT_APPLICANT VALUES(102,'APPLICANT2','APPLIED')
+INSERT INTO PROJECT_APPLICANT VALUES(103,'APPLICANT3','APPLIED')
+INSERT INTO PROJECT_APPLICANT VALUES(104,'APPLICANT4','APPLIED')
